@@ -12,7 +12,7 @@ vehicles_us['price'] = pd.to_numeric(vehicles_us['price'], errors='coerce').fill
 veh_hist = px.histogram(vehicles_us, x='price')  # Replace 'column_name' with the column you want to plot
 st.plotly_chart(veh_hist)
 
-veh_scatter = px.scatter(df, x='type', y='price')  # Replace 'x_column' and 'y_column' with actual column names
+veh_scatter = px.scatter(vehicles_us, x='type', y='price')  # Replace 'x_column' and 'y_column' with actual column names
 st.plotly_chart(veh_scatter)
 
 if st.checkbox('Show Histogram'):
