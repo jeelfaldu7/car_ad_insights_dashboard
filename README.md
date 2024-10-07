@@ -8,6 +8,18 @@ This is a python-based tool used to develop and deploy a web application based o
 - Interactive visualizations using Streamlit.
 - Dynamic plotting using `plotly.express` and `altair`.
 - Real-time feedback on event probabilities and outcomes.
+- Interactive histograms and scatter plots
+- Checkbox options to show or hide visualizations
+- Built with Streamlit for real-time data interaction
+
+## Requirements
+
+- Python 3.x
+- Streamlit
+- Pandas
+- Plotly
+- Scipy
+- altair
 
 ## Libraries Used
 - `pandas`: For data manipulation.
