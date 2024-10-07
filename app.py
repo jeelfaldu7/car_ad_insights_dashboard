@@ -9,7 +9,9 @@ st.header('Software Development Tool Application')
 
 vehicles_us['price'] = pd.to_numeric(vehicles_us['price'], errors='coerce').fillna(0).astype('int64')
 
-veh_hist = px.histogram(vehicles_us, x='price')  # Replace 'column_name' with the column you want to plot
+manufacturer_type_counts = vehicles_us.groupby(['manufacturer', 'type']).size().reset_index(name='count')
+
+veh_hist = px.histogram(manufacturer_type_counts, x='manufacturer', hue='type')  # Replace 'column_name' with the column you want to plot
 st.plotly_chart(veh_hist)
 
 veh_scatter = px.scatter(vehicles_us, x='type', y='price')  # Replace 'x_column' and 'y_column' with actual column names
