@@ -13,10 +13,10 @@ vehicles_us['manufacturer'] = vehicles_us['model'].str.split().str[0]
 
 manufacturer_type_counts = vehicles_us.groupby(['manufacturer', 'type']).size().reset_index(name='count')
 
-veh_hist = px.histogram(manufacturer_type_counts, x='manufacturer', hue='type')  # Replace 'column_name' with the column you want to plot
+veh_hist = px.histogram(manufacturer_type_counts, x='manufacturer', color='type', title='Vehicle types by manufacturer', labels={'manufacturer': 'Manufacturer', 'type': 'Vehicle Type'}) 
 st.plotly_chart(veh_hist)
 
-veh_scatter = px.scatter(vehicles_us, x='type', y='price')  # Replace 'x_column' and 'y_column' with actual column names
+veh_scatter = px.scatter(vehicles_us, x='type', y='price')
 st.plotly_chart(veh_scatter)
 
 if st.checkbox('Show Histogram'):
