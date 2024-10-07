@@ -16,6 +16,12 @@ manufacturer_type_counts = vehicles_us.groupby(['manufacturer', 'type']).size().
 veh_hist = px.histogram(manufacturer_type_counts, x='manufacturer', color='type', title='Vehicle types by manufacturer', labels={'manufacturer': 'Manufacturer', 'type': 'Vehicle Type'}) 
 st.plotly_chart(veh_hist)
 
+hist = px.histogram(vehicles_us, x='manufacturer', y='price', title='Price distribution of models', labels={'manufacturer': 'model', 'price': 'Price'}) 
+st.plotly_chart(hist)
+
+fig_hist = px.histogram(vehicles_us, x='model_year', color='condition', title='Vehicle types by manufacturer', labels={'manufacturer': 'Manufacturer', 'type': 'Vehicle Type'}) 
+st.plotly_chart(veh_hist)
+
 veh_scatter = px.scatter(vehicles_us, x='type', y='price')
 st.plotly_chart(veh_scatter)
 
