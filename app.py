@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-st.header('Software Development Tool Application') 
+vehicles_us = pd.read_csv('vehicles_us.csv')
 
 vehicles_us['price'] = pd.to_numeric(vehicles_us['price'], errors='coerce').fillna(0).astype('int64')
 
@@ -10,8 +10,8 @@ vehicles_us['manufacturer'] = vehicles_us['model'].str.split().str[0]
 
 vehicles_us = pd.read_csv('vehicles_us.csv')
 
-st.write(vehicles_us)
 st.header('Software Development Tool Application')
+st.write(vehicles_us)
 
 manufacturer_type_counts = vehicles_us.groupby(['manufacturer', 'type']).size().reset_index(name='count')
 
