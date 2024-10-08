@@ -19,12 +19,24 @@ st.plotly_chart(veh_hist)
 fig_hist = px.histogram(vehicles_us, x='model_year', color='condition', title='Condition vs Model Year', labels={'model_year': 'Model Year', 'condition': 'Condition'}) 
 st.plotly_chart(fig_hist)
 
-hist = px.histogram(vehicles_us, x='price', y='manufacturer', title='Price distribution of cars based on the manufacturers', labels={'price': 'Price', 'manufacturer': 'Manufacturer'}) 
+hist = px.histogram(vehicles_us, x='manufacturer', y='price', title='Price distribution of cars based on the manufacturers', labels={'manufacturer': 'Manufacturer', 'price': 'Price'}) 
 st.plotly_chart(hist)
 
 
 veh_scatter = px.scatter(vehicles_us, x='cylinders', y='price', title='Price based on the cylinders in a car', labels={'cylinders': 'Cylinders', 'price': 'Price'})
 st.plotly_chart(veh_scatter)
+
+fig_scatter = px.scatter(vehicles_us, x='odometer', y='price', title='Price vs Odometer', labels={'odometer': 'Odometer', 'price': 'Price'})
+st.plotly_chart(fig_scatter)
+
+scatter = px.scatter(vehicles_us, x='model_year', y='price', title='Price based on the model year of a car', labels={'model_year': 'Model Year', 'price': 'Price'})
+st.plotly_chart(scatter)
+
+us_scatter = px.scatter(vehicles_us, x='days_listed', y='price', title='Price based on the day the car is listed', labels={'days_listed': 'Days listed', 'price': 'Price'})
+st.plotly_chart(us_scatter)
+
+veh = px.scatter(vehicles_us, x='model_year', y='odometer', title='Odometer reading based on the model year of a car', labels={'model_year': 'Model Year', 'odometer': 'Odometer'})
+st.plotly_chart(veh)
 
 if st.checkbox('Show Histogram'):
     st.plotly_chart(veh_hist)
@@ -34,3 +46,7 @@ if st.checkbox('Show Histogram'):
 
 if st.checkbox('Show Scatter Plot'):
     st.plotly_chart(veh_scatter)
+    st.plotly_chart(fig_scatter)
+    st.plotly_chart(scatter)
+    st.plotly_chart(us_scatter)
+    st.plotly_chart(veh)
