@@ -8,8 +8,6 @@ vehicles_us['price'] = pd.to_numeric(vehicles_us['price'], errors='coerce').fill
 
 vehicles_us['manufacturer'] = vehicles_us['model'].str.split().str[0]
 
-vehicles_us = pd.read_csv('vehicles_us.csv')
-
 st.header('Software Development Tool Application')
 st.write(vehicles_us)
 
