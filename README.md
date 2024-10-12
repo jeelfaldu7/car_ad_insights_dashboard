@@ -30,10 +30,11 @@ This is a python-based tool used to develop and deploy a web application based o
 ## Installation Instructions
 To set up this project on your local machine, follow these steps:
 
+## Link to the application:
+https://project-5-sda.onrender.com
+
 ### 1. Clone the repository:
 ```bash
 git clone https://github.com/jeelfaldu7/Project_5_SDA.git
 cd C:/Users/jeelf/Project_5_SDA
 
-## Link to the application: 
-https://project-5-sda.onrender.com
