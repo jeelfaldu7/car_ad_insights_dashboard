@@ -1,4 +1,4 @@
-# 🚗 Car Sales Dashboard
+# 🚗 Car Ad Insights Dashboard
 A web application for exploring and visualizing car sales advertisement data using Streamlit, and Plotly. This project demonstrates basic data analysis and interactive dashboard development, and is deployed on Render for public access. 
 
 ## 📜 Table of Contents
